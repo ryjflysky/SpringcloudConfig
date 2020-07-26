@@ -25,13 +25,3 @@ spring:
       profile: dev # 环境
       label: master # 分支
       uri: http://localhost:8899 # 配置中心地址
-
-# 注册到eureka注册中心
-eureka:
-  client:
-    service-url:
-      defaultZone: "http://LaGouCloudEurekaServerA:8761/eureka,http://LaGouCloudEurekaServerB:8762/eureka"
-  instance:
-    prefer-ip-address: true # 服务列表中显示ip地址而不是显示主机名
-    instance-id: "${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@" # 自定义服务实例名称
-#    metadata-map: # 元数据信息
