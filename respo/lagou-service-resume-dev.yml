@@ -28,7 +28,7 @@ spring:
 
 config:
   center:
-    name: lagou-service-config-dev-8888888
+    name: lagou-service-config-dev-11111111111111111111111
 
 management:
   endpoints:
