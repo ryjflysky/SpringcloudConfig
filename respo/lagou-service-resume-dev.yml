@@ -25,3 +25,7 @@ spring:
       profile: dev # 环境
       label: master # 分支
       uri: http://localhost:8899 # 配置中心地址
+
+config:
+  center:
+    name: lagou-service-config-dev
