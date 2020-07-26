@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: lagou-service-resume
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.133.60:3306/lagou?characterEncoding=UTF-8
+    username: root
+    password: root
+
+
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #避免驼峰命名转化为下划线
+
+  cloud:
+    config:
+      name: lagou-service-resume # 应用名称，拉取那个配置文件
+      profile: dev # 环境
+      label: master # 分支
+      uri: http://localhost:8899 # 配置中心地址
+
+# 注册到eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://LaGouCloudEurekaServerA:8761/eureka,http://LaGouCloudEurekaServerB:8762/eureka
+  instance:
+    prefer-ip-address: true # 服务列表中显示ip地址而不是显示主机名
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@ # 自定义服务实例名称
+#    metadata-map: # 元数据信息
