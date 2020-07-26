@@ -29,3 +29,9 @@ spring:
 config:
   center:
     name: lagou-service-config-dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
