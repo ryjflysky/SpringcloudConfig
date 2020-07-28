@@ -1,0 +1,5 @@
+limit:
+  user:
+    register:
+      time: 1
+      count: 10
