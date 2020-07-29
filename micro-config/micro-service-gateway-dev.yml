@@ -2,6 +2,6 @@ limit:
   excludes:
     - /user/isRegistered/{email}
     - /user/register/{email}/{password}/{code}
-    - /user/login/{email}/{password}
+    - /code/create/{email}
   time: 1
   count: 10
