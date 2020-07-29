@@ -1,7 +1,8 @@
 limit:
   excludes:
-    - /user/isRegistered/{email}
-    - /user/register/{email}/{password}/{code}
-    - /code/create/{email}
+    - /api/user/isRegistered/{email}
+    - /api/user/register/{email}/{password}/{code}
+    - /api/code/create/{email}
+    - /api/user/login/{email}/{password}
   time: 1
   count: 10
