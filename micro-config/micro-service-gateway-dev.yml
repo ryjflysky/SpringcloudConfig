@@ -1,5 +1,7 @@
 limit:
-  user:
-    register:
-      time: 1
-      count: 10
+  excludes:
+    - /user/isRegistered/{email}
+    - /user/register/{email}/{password}/{code}
+    - /user/login/{email}/{password}
+  time: 1
+  count: 10
