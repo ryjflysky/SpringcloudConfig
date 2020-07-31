@@ -2,6 +2,6 @@ limit:
   excludes:
     - /api/user/register/{email}/{password}/{code}
     - /api/code/create/{email}
-    - /api/user/login/{email}/{password}
+    - /api/user/login/
   time: 1
   count: 10
