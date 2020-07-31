@@ -1,6 +1,5 @@
 limit:
   excludes:
-    - /api/user/isRegistered/{email}
     - /api/user/register/{email}/{password}/{code}
     - /api/code/create/{email}
     - /api/user/login/{email}/{password}
