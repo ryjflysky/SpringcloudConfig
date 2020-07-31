@@ -3,5 +3,6 @@ limit:
     - /api/user/register/{email}/{password}/{code}
     - /api/code/create/{email}
     - /api/user/login/
+    - /code/validate/{email}/{code}
   time: 1
   count: 10
